@@ -1,0 +1,12 @@
+[Unit]
+Description=Eclipse Orion Web IDE
+
+[Service]
+EnvironmentFile=/etc/conf.d/eclipse-orion
+WorkingDirectory=/usr/share/eclipse-orion
+ExecStart=/bin/bash /usr/share/eclipse-orion/orion.sh
+User=eclipse-orion
+
+[Install]
+WantedBy=multi-user.target
+
